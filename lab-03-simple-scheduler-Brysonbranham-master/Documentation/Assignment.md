@@ -63,11 +63,16 @@ Saving and closing this view will re-generate your **main.c**. You can then modi
 
 1. List a shortfall that makes this method not a true ‘scheduler’? [*answer here*]
 
+A true scheduler can be interrupted by more important tasks. This scheduler has to complete it’s task before moving on to the next one. 
+
 2. Was there any priority built into this system?
+Yes the last task holds the highest priority in the list since my for loop checks each individual task and calls in reverse order.
 
 3. Are the variables in the processes (D1_task and D4_task) local or global?   How do you tell and why would either be used or must be used?
+No they are global since they are declared outside of any function. 
 
-4. For the interrupts on Button_1/2, why were the GPIO modes set to be Falling edge trigger?
+5. For the interrupts on Button_1/2, why were the GPIO modes set to be Falling edge trigger?
+The buttons are an active-low. If they were set on a rising edge they would work on button release instead of press. 
 
 
 ## Ideas for Credit to get to 'A' & Extra-Credit (2 pts for any)
